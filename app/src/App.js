@@ -53,12 +53,12 @@ const Header = styled.header`
   padding: 40px 20px;
   background: linear-gradient(135deg, #2a9d8f, #264653);
   color: #fff;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
 
   h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
     margin: 0;
   }
 
@@ -91,18 +91,18 @@ const LocationForm = styled.form`
     padding: 10px;
     width: 250px;
     border: none;
-    border-radius: 4px 0 0 4px;
-    font-size: 1rem;
+    border-radius: 12px 0 0 12px;
+    font-size: 1.25rem;
     outline: none;
   }
 
   button {
     padding: 10px 16px;
     border: none;
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 12px 12px 0;
     background: #2a9d8f;
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.25rem;
     cursor: pointer;
     transition: background 0.3s;
 
@@ -116,13 +116,13 @@ const LocationForm = styled.form`
 
     input {
       width: 80%;
-      border-radius: 4px;
+      border-radius: 8px;
       margin-bottom: 10px;
     }
 
     button {
       width: 80%;
-      border-radius: 4px;
+      border-radius: 8px;
     }
   }
 `;
@@ -145,14 +145,14 @@ const ErrorMessage = styled.div`
 const PredictionCard = styled.section`
   background: #fff;
   border-left: 6px solid #2a9d8f;
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 20px;
   margin: 30px 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   h2 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: #264653;
   }
 
@@ -173,7 +173,7 @@ const PredictionCard = styled.section`
 
 /* Outcome message with color coding */
 const Outcome = styled.p`
-  font-size: 1.3rem;
+  font-size: 1.4rem !important;
   font-weight: 700;
   color: ${(props) => (props.correct ? "#2a9d8f" : "#e63946")};
   margin-top: 15px;
@@ -197,7 +197,7 @@ const ForecastGrid = styled.div`
 /* Forecast Card styling with hover effects */
 const ForecastCard = styled.div`
   background: #fff;
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 15px;
   text-align: center;
   transition:
@@ -244,7 +244,7 @@ const ChartWrapper = styled.div`
   margin: 40px 0;
   padding: 20px;
   background: #fff;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   height: 400px; /* Default height */
 
@@ -489,10 +489,10 @@ function App() {
               )}
               <Outcome correct={isGroundhogCorrect}>
                 {isGroundhogCorrect
-                  ? `Groundhog ${
+                  ? `Punxsutawney Phil ${
                       dataMode === "historical" ? "was" : "is"
                     } correct!`
-                  : `Groundhog ${
+                  : `Punxsutawney Phil ${
                       dataMode === "historical" ? "was" : "is"
                     } incorrect!`}
               </Outcome>
